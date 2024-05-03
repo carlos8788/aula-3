@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Epilogue", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ************************************** */
+/* ************* FIRST MOBILE *********** */
+/* ************************************** */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-container {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.566);
+    width: 100%;
+    height: 100vh;
+}
+
+.menu {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: hsl(0, 0%, 98%);
+    width: 66%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-close {
+    padding: 20px 15px;
+    align-self: flex-end;
+}
+
+.menu>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 15px 30px;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+}
+
+.menu-list>li:first-child::after,
+.menu-list>li:nth-child(2)::after {
+    content: url('../images/icon-arrow-down.svg');
+    margin-left: 15px;
+}
+
+
+
+.menu>ul:last-child {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.register {
+    padding: 10px 50px;
+    border: solid 2px hsl(0, 0%, 41%);
+    border-radius: 10px;
+}
+
+.hero-img {
+    background-image: url('../images/image-hero-mobile.png');
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text-container>h1 {
+    margin: 30px 0;
+    font-size: 34px;
+}
+
+.text-container>p {
+    color: #696969;
+    margin: 0 15px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.text-container>button {
+    margin: 30px 0 20px 0;
+    padding: 15px 30px;
+    border: none;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+footer>ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+
+footer>ul>li>img {
+    width: 70px;
+}
+
+/* ************************************** */
+/* ************* DESKTOP **************** */
+/* ************************************** */
+
+@media (width > 1000px) {
+
+    /* NAVBAR */
+    nav {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-container,
+    .menu {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .menu {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .menu>ul {
+        flex-direction: row;
+    }
+
+    .register {
+        border: none;
+        padding: 0;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    /* MAIN */
+    main {
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        width: 1440px;
+    }
+
+    .hero-img {
+        background-image: url('../images/image-hero-desktop.png');
+        width: 500px;
+        height: 750px;
+    }
+
+    .text-container {
+        justify-content: center;
+        align-items: start;
+        padding: 0 50px;
+        width: 66%;
+    }
+
+    .text-container>h1{
+        font-size: 110px;
+    }
+
+    .text-container>p {
+        font-size: 20px;
+        text-align: start;
+    }
+
+    .text-container>button {
+        padding: 15px 50px;
+        font-size: 18px;
+    }
+
+    footer{
+        margin: 0 100px;
+    }
+
+    footer>ul>li>img {
+        width: 100px;
+    }
+}

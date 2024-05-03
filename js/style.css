@@ -1,0 +1,17 @@
+.color-green {
+    color: green;
+}
+
+.color-green:hover {
+    background-color: rgb(130, 130, 130);
+}
+
+.rotacion {
+    rotate: 90deg;
+    padding: 5px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
